@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import Budget from './components/Budget';
+import Remaining from './components/Remaining';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1 className='mt-3'>지출 계획</h1>
+      <div className='row-mt'>
+        <div className='col-sm'>
+          <Budget />
+        </div>
+        <div className='col-sm'>
+          <Remaining />
+        </div>
+        <div className='col-sm'>
+          <ExtenseTotal />
+        </div>
     </div>
+
+    <h3 className='mt-3'>지출들</h3>
+    <div className='row'>
+      <div className='col-sm'>
+        <ExtenseList />
+      </div>
+    </div>
+    </ div>
+   
+   
   );
 }
 
